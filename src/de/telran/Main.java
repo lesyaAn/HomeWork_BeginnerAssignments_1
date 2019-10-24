@@ -60,5 +60,47 @@ public class Main {
             if (nums[i] % 2 == 0) count++;
         return count;
     }
-    
+
+
+
+
+
+
+    public int[] zeroMax(int[] nums) {
+
+        int max = 0;
+
+        for (int i = nums.length - 1; i >= 0; i--) {
+            if(nums[i] % 2 == 1 && nums[i] > max)
+                max = nums[i];
+            if(nums[i] == 0)
+                nums[i] = max;
+        }
+        return nums;
+    }
+
+    public int[] shiftLeft(int[] nums{
+        if (nums.length > 0) {
+            int first = nums[0];
+            for (int i = 0; i < nums.length - 1; i++)
+                nums[i] = nums[i + 1];
+            nums[nums.length - 1] = first;
+        }
+        return nums;
+    }
+
+    public String nonStart(String a, String b) {
+        return a.substring(1) + b.substring(1);
+    }
+
+    public String middleTwo(String str) {
+
+        return str.substring((str.length() / 2) - 1, (str.length() / 2) + 1);
+    }
+
+
+
+
+
+
 }
